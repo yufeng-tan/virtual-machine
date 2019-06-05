@@ -30,6 +30,7 @@ class E_ne:
             self.n = n
         else:
             self.n = 'error'
+            
     def __str__(self):
         return str(self.n)
 
