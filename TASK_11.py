@@ -64,15 +64,15 @@ class E:
 
         if len(self.list) == 3 and self.list[0] in prim_list:
             if self.list[0] == '+':
-                return self.list[1] + self.list[2]
+                return int(self.list[1]) + int(self.list[2])
             if self.list[0] == '*':
-                return self.list[1] * self.list[2]
+                return int(self.list[1]) * int(self.list[2])
             if self.list[0] == '/':
-                return self.list[1] / self.list[2]
+                return int(self.list[1]) / int(self.list[2])
             if self.list[0] == '-':
-                return self.list[1] * self.list[2]
+                return int(self.list[1]) * int(self.list[2])
 
-        if len(self.list) > 4:
+        if len(self.list) != 4 or len(self.list) != 3:
             return self.list
 
 
@@ -82,6 +82,12 @@ print(E(['if', '<=', '3', '4']).interp())
 print(E(['if', '>=', '7', '7']).interp())
 print(E(['if', '=', '7', '7']).interp())
 print(E(['if', '=', '7', '9']).interp())
+print(E(['+', '7', '9']).interp())
+print(E(['-', '7', '9']).interp())
+print(E(['*', '7', '9']).interp())
+print(E(['/', '7', '9']).interp())
+print(E(['+']).interp())
+
 
 '''
 3 is less than 4
@@ -90,4 +96,9 @@ print(E(['if', '=', '7', '9']).interp())
 7 is greater or equal to 7
 7 is equal to 7
 7 is not equal to 9
+16
+63
+63
+0.7777777777777778
+['+']
 '''
