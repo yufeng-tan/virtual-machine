@@ -1,12 +1,6 @@
 # TASK 11
 # (HL) Extend your interpreter for J1.
 
-# test strings
-string_1 = 'if, A is bigger than B, return A, return B'
-string_2 = 'if, >= 4 2, 4, 2'
-string_3 = '(* 3, 4)'
-string_4 = 'abc,123,def,456, ghi'
-string_5 = '+'
 
 prim_list = ['+', '*', '/', '-', '<=', '<', '=', '>', '>=']
 
