@@ -17,20 +17,6 @@ class V:
     def __str__(self):
         return str(self.interp())
 
-
-class E_if2:
-    def __init__(self, n):
-        if str(n)[0:2] == 'if':
-            self.n = n
-        else:   self.n = 'error'
-
-    def __str__(self):
-        str_if = self.n.split(',')[0]
-        str_ec = self.n.split(',')[1]
-        str_et = self.n.split(',')[2]
-        str_ef = self.n.split(',')[3]
-        return str('(' + str_if + ',' + str_ec + ',' + str_et + ',' + str_ef + ')')
-
 class E:
     def __init__(self, list):
         self.list = list
