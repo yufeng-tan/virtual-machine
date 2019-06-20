@@ -38,9 +38,10 @@ def find_redex(s):
     max_parenthsis = maxDepth(s)
     max_parenthsis_start = find_nth(test_string, '(', maxDepth(test_string))
     max_parenthsis_end = find_nth(test_string, ')', 1)
-    print(s[max_parenthsis_end:max_parenthsis_end])
-
+    redex = s[max_parenthsis_start:max_parenthsis_end+1]
+    new_s = s.replace(redex, 'HOLE')
+    return new_s + ' ' + redex
     
-print(find_nth(test_string, '(', maxDepth(test_string)))
-print(find_nth(test_string, ')', 1))
-find_redex(test_string)
+
+print(find_redex(test_string))
+# (if (< HOLE 5) 3 4) (+ 1 1)   
