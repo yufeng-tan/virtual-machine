@@ -43,9 +43,9 @@ def find_redex(s):
     max_parenthsis_start = find_nth(test_string, '(', maxDepth(test_string))
     max_parenthsis_end = find_nth(test_string, ')', 1)
     redex = s[max_parenthsis_start:max_parenthsis_end+1]
-    new_s = find_redex(s.replace(redex, 'HOLE'))
-    ss = find_redex(new_s) + ' ' + redex
-    return ss
+    new_s = s.replace(redex, 'HOLE')
+    ss = new_s + ' ' + redex
+    return find_redex(ss)
     
 
 print(find_redex(test_string))
