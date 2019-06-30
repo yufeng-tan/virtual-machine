@@ -1,7 +1,6 @@
 # (HL) Define a substitution function that plugs the value of a variable into references to that variable. 
 
 def subsitution(e, v):
-
     e = str(e)
     v = str(v)
     return e.replace('x', v)
