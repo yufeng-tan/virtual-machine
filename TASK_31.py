@@ -24,7 +24,6 @@ test_7 = ['delta', 'vn', 'env', 'kapp', 'v0...', 'e0...', 'k']
 # return ['delta', 'delta(p, v0...vn)', 'env', 'k']
 test_8 = ['delta', 'vn', 'env', 'kapp', 'pv0', 'v0', ' ', 'k']
 
-
 # return 'Let define (f x0...) e) = delta f' + ['delta', 'e', 'env[x0->v0]', 'k']
 test_9 = ['delta', 'vn', 'env', 'kapp', 'fv0', ' ', 'k' ]
 
