@@ -18,7 +18,7 @@ test_5 = ['delta', 'true', 'env', 'kif', '2', '5', 'k']
 # return ['delta', '5', 'env', 'k']
 test_6 = ['delta', 'false', 'env', 'kif', '2', '5', 'k']
 
-# return 'Let define (f x0...) e) = delta F' + ['delta', 'e', 'env[x0->v0]', 'k']
+# return 'Let define (f x0...) e) = delta f' + ['delta', 'e', 'env[x0->v0]', 'k']
 test_7 = ['delta', 'vn', 'env', 'kapp', 'fvo', ' ', 'k' ]
 
 def CK1(expr):
@@ -38,7 +38,7 @@ def CK1(expr):
     if expr[1] == 'false':
         return ['delta', expr[5], 'env', 'k']
     if expr[1] == 'vn':
-        def_str = 'Let define (f x0...) e) = delta F'
+        def_str = 'Let define (f x0...) e) = delta f'
         li = ['delta', 'e', 'env[x0->v0]', 'k']
         return [def_str, li]
     else:
