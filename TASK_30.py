@@ -17,8 +17,12 @@ def CK1(expr):
         return ['delta', expr[4], 'env', 'k']
     if expr[1] == 'false':
         return ['delta', expr[5], 'env', 'k']
+    if expr[4] == 'v0...':
+        return ['delta', 'e0', expr[2], expr[3], expr[4], 'e1...', expr[6]]
+    if expr[1] == 'vn' and expr[4] == 'pv0':
+        return ['delta', 'delta(p, v0...vn)', expr[2], expr[7]]
     if expr[1] == 'vn':
-        def_str = 'Let define (f x0...) e) = delta F'
+        def_str = 'Let define (f x0...) e) = delta f'
         li = ['delta', 'e', 'env[x0->v0]', 'k']
         return [def_str, li]
     else:
