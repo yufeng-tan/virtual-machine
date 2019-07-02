@@ -27,7 +27,7 @@ test_8 = ['delta', 'vn', 'env', 'kapp', 'pv0', 'v0', ' ', 'k']
 # return 'Let define (f x0...) e) = delta f' + ['delta', 'e', 'env[x0->v0]', 'k']
 test_9 = ['delta', 'vn', 'env', 'kapp', 'fv0', ' ', 'k' ]
 
-def CK1(expr):
+def CEK0(expr):
     if expr[1] == 'x' and expr[2] == 'mt':
         return 'error'
     if expr[1] == 'x' and isinstance(expr[2], list) and expr[1] == expr[2][0]:
@@ -55,20 +55,20 @@ def CK1(expr):
         return 'Error!'
 
 
-print(CK1(test_1))
+print(CEK0(test_1))
 
-print(CK1(test_2))
+print(CEK0(test_2))
 
-print(CK1(test_3))
+print(CEK0(test_3))
 
-print(CK1(test_4))
+print(CEK0(test_4))
 
-print(CK1(test_5))
+print(CEK0(test_5))
 
-print(CK1(test_6))
+print(CEK0(test_6))
 
-print(CK1(test_7))
+print(CEK0(test_7))
 
-print(CK1(test_8))
+print(CEK0(test_8))
 
-print(CK1(test_9))
+print(CEK0(test_9))
