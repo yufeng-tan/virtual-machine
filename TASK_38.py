@@ -20,7 +20,10 @@ def SUB1(n):
 def MULT(m, n):
     return m * n
 
-
+# fac := Z mkfac
+#       Z mkfac => fac
+#       Z mk (lambdafac M) => m[fac <- (Z mkfac)]
+#       Z(lambda x, M) => m [Z (lambda x, M)]
 def factorial_(n):
     if n == 0:
         return 1
