@@ -4,7 +4,13 @@
 
 test_1 = ['l', 'env', 'k']
 
+
+envp = ['env', 'l_>f', 'NULL']
+clo = ['l', 'evnp']
+# evnp -> val = clo
+
 def CEK2(expr):
+    # I have tried using list to represend the cycle, but fail. 
     if expr[0] == 'l' and len(expr) == 3:
         r1 = 'c, mt, k'
         r2 = 'where l = (lambda f(x0...xn))'
