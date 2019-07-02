@@ -1,7 +1,7 @@
 # Modify your CK1 machine into the CEK0 machine. 
 
 
-def CK1(expr):
+def CEK0(expr):
     if expr[1] == 'x' and expr[2] == 'mt':
         return 'error'
     if expr[1] == 'x' and isinstance(expr[2], list) and expr[1] == expr[2][0]:
