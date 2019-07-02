@@ -11,7 +11,7 @@
 # prim::= + | * | / | - | <= | < | = | > | >=
 #   | pair | fst | snd | inl | inr | box | unbox | set-box!
 
-prim_list = ['+', '*', '/', '-', '<=', '<', '=', '>', '>=', 'pair', 'fst', 'snd', 'inl', 'inr']
+prim_list = ['+', '*', '/', '-', '<=', '<', '=', '>', '>=', 'pair', 'fst', 'snd', 'inl', 'inr', 'box', 'unbox', 'set-box!']
 
 class x:
     def __init__(self, x):
